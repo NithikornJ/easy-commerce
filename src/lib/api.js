@@ -11,16 +11,17 @@ export async function fetchFeaturedProducts() {
   }
 }
 
-export async function fetchProduct(){
+export async function fetchProduct() {
   try {
-    const response = await axios.get(`${BASE_URL}/products`)
-    return response.data
-  } catch (error) {
-    console.log('error', error);
+    const res = await fetch('https://fakestoreapi.com/products')
+    const data = await res.json()
+    console.log('✅ data from fakestoreapi:', data)
+    return data
+  } catch (err) {
+    console.error('❌ Fetch error:', err)
     return []
   }
 }
-
 export async function fetchProductById(id){
   try {
     const response = await axios.get(`${BASE_URL}/products/${id}`)
