@@ -4,7 +4,6 @@ import { fetchProductById } from "@/lib/api";
 import { useCartStore } from "@/store/cartStore";
 import { useEffect, useState } from "react";
 import { useParams } from "next/navigation";
-import Navbar from "@/components/Navbar";
 import Link from "next/link";
 
 
