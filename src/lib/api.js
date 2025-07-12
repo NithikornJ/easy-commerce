@@ -13,12 +13,10 @@ export async function fetchFeaturedProducts() {
 
 export async function fetchProduct() {
   try {
-    const res = await fetch('https://fakestoreapi.com/products')
+    const res = await fetch(`${BASE_URL}/products`)
     const data = await res.json()
-    console.log('✅ data from fakestoreapi:', data)
     return data
   } catch (err) {
-    console.error('❌ Fetch error:', err)
     return []
   }
 }

@@ -12,7 +12,6 @@ export default async function ProductsPage() {
   if (!products) {
     return <div>ไม่พบสินค้า</div>;
   }
-  console.log(products)
 
   return (
     <>
